@@ -1,6 +1,20 @@
 import { CollectionConfig } from 'payload/types';
 
-export const TwoColumn: CollectionConfig = {
+interface TwoColumnBlock {
+    slug: string;
+    labels: {
+        singular: string;
+        plural: string;
+    };
+    fields: {
+        name: string;
+        label: string;
+        type: string;
+        // Additional properties as needed
+    }[];
+}
+
+export const TwoColumn: TwoColumnBlock = {
     slug: 'twoColumn',
     labels: {
         singular: 'Two Column Block',

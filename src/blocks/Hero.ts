@@ -1,6 +1,20 @@
 import { CollectionConfig } from 'payload/types';
 
-export const Hero: CollectionConfig = {
+interface HeroBlock {
+    slug: string;
+    labels: {
+        singular: string;
+        plural: string;
+    };
+    fields: {
+        name: string;
+        label: string;
+        type: string;
+        // Additional properties as needed
+    }[];
+}
+
+export const Hero: HeroBlock = {
     slug: 'hero',
     labels: {
         singular: 'Hero Block',
