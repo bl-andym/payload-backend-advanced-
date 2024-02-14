@@ -6,13 +6,28 @@ interface HeroBlock {
         singular: string;
         plural: string;
     };
-    fields: {
-        name: string;
-        label: string;
-        type: string;
-        // Additional properties as needed
-    }[];
+    fields: (TextualField | TextAreaField | UploadField)[];
 }
+
+interface TextualField {
+    name: string;
+    label: string;
+    type: 'text';
+}
+
+interface TextAreaField {
+    name: string;
+    label: string;
+    type: 'textarea';
+}
+
+interface UploadField {
+    name: string;
+    label: string;
+    type: 'upload';
+    relationTo: string;
+}
+
 
 export const Hero: HeroBlock = {
     slug: 'hero',

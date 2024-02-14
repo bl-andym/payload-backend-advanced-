@@ -1,5 +1,10 @@
 import { CollectionConfig } from 'payload/types';
 
+type Option = {
+    label: string;
+    value: string;
+};
+
 interface TwoColumnBlock {
     slug: string;
     labels: {
@@ -10,7 +15,8 @@ interface TwoColumnBlock {
         name: string;
         label: string;
         type: string;
-        // Additional properties as needed
+        relationTo?: string;
+        options?: Option[];
     }[];
 }
 
