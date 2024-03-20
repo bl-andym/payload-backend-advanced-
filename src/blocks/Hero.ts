@@ -6,26 +6,14 @@ interface HeroBlock {
         singular: string;
         plural: string;
     };
-    fields: (TextualField | TextAreaField | UploadField)[];
+    fields: Field[];
 }
 
-interface TextualField {
+interface Field {
     name: string;
     label: string;
-    type: 'text';
-}
-
-interface TextAreaField {
-    name: string;
-    label: string;
-    type: 'textarea';
-}
-
-interface UploadField {
-    name: string;
-    label: string;
-    type: 'upload';
-    relationTo: string;
+    type: 'text' | 'textarea' | 'upload';
+    relationTo?: string; // Optional, only for 'upload' type
 }
 
 

@@ -6,38 +6,16 @@ interface TwoColumnBlock {
         singular: string;
         plural: string;
     };
-    fields: (TextualField | TextAreaField | UploadField | SelectField)[];
+    fields: Field[];
 }
 
-interface TextualField {
+interface Field {
     name: string;
     label: string;
-    type: 'text';
+    type: 'text' | 'textarea' | 'upload' | 'select';
+    relationTo?: string; // Optional, for 'upload' type
+    options?: { label: string; value: string }[]; // Optional, for 'select' type
 }
-
-interface TextAreaField {
-    name: string;
-    label: string;
-    type: 'textarea';
-}
-
-interface UploadField {
-    name: string;
-    label: string;
-    type: 'upload';
-    relationTo: string;
-}
-
-interface SelectField {
-    name: string;
-    label: string;
-    type: 'select';
-    options: {
-        label: string;
-        value: string;
-    }[];
-}
-
 
 export const TwoColumn: TwoColumnBlock = {
     slug: 'twoColumn',
