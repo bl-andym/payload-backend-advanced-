@@ -6,6 +6,47 @@ interface TwoColumnBlock {
         singular: string;
         plural: string;
     };
+    fields: (TextualField | TextAreaField | UploadField | SelectField)[];
+}
+
+interface TextualField {
+    name: string;
+    label: string;
+    type: 'text';
+}
+
+interface TextAreaField {
+    name: string;
+    label: string;
+    type: 'textarea';
+}
+
+interface UploadField {
+    name: string;
+    label: string;
+    type: 'upload';
+    relationTo: string;
+}
+
+interface SelectField {
+    name: string;
+    label: string;
+    type: 'select';
+    options: {
+        label: string;
+        value: string;
+    }[];
+}
+
+/*
+more efficient, works in browser but Pages.ts not happy 
+
+interface TwoColumnBlock {
+    slug: string;
+    labels: {
+        singular: string;
+        plural: string;
+    };
     fields: Field[];
 }
 
@@ -16,6 +57,8 @@ interface Field {
     relationTo?: string; // Optional, for 'upload' type
     options?: { label: string; value: string }[]; // Optional, for 'select' type
 }
+*/
+
 
 export const TwoColumn: TwoColumnBlock = {
     slug: 'twoColumn',

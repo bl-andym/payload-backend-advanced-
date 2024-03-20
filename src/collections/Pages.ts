@@ -29,8 +29,8 @@ export const Pages: CollectionConfig = {
             label: 'Layout',
             type: 'blocks',
             blocks: [
-                Hero,
-                TwoColumn,
+                Hero, // but it works!
+                TwoColumn, // but it works!
             ]
         },
     ],
