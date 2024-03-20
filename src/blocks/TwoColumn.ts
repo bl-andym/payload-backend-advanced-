@@ -38,27 +38,24 @@ interface SelectField {
     }[];
 }
 
-/*
-more efficient, works in browser but Pages.ts not happy 
+/* works in browser but Pages.ts not happy */
 
-interface TwoColumnBlock {
-    slug: string;
-    labels: {
-        singular: string;
-        plural: string;
-    };
-    fields: Field[];
-}
+// interface TwoColumnBlock {
+//     slug: string;
+//     labels: {
+//         singular: string;
+//         plural: string;
+//     };
+//     fields: Field[];
+// }
 
-interface Field {
-    name: string;
-    label: string;
-    type: 'text' | 'textarea' | 'upload' | 'select';
-    relationTo?: string; // Optional, for 'upload' type
-    options?: { label: string; value: string }[]; // Optional, for 'select' type
-}
-*/
-
+// interface Field {
+//     name: string;
+//     label: string;
+//     type: 'text' | 'textarea' | 'upload' | 'select';
+//     relationTo?: string; // Optional, for 'upload' type
+//     options?: { label: string; value: string }[]; // Optional, for 'select' type
+// }
 
 export const TwoColumn: TwoColumnBlock = {
     slug: 'twoColumn',
