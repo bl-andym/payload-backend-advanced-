@@ -1,5 +1,3 @@
-import { CollectionConfig } from 'payload/types';
-
 interface HeroBlock {
     slug: string;
     labels: {
@@ -28,26 +26,23 @@ interface UploadField {
     relationTo: string;
 }
 
-/* 
-more efficient, works in browser but Pages.ts not happy 
+/* works in browser but Pages.ts not happy */
 
-interface HeroBlock {
-    slug: string;
-    labels: {
-        singular: string;
-        plural: string;
-    };
-    fields: Field[];
-}
+// interface HeroBlock {
+//     slug: string;
+//     labels: {
+//         singular: string;
+//         plural: string;
+//     };
+//     fields: Field[];
+// }
 
-interface Field {
-    name: string;
-    label: string;
-    type: 'text' | 'textarea' | 'upload';
-    relationTo?: string; // Optional, only for 'upload' type
-}
-
-*/
+// interface Field {
+//     name: string;
+//     label: string;
+//     type: 'text' | 'textarea' | 'upload';
+//     relationTo?: string; // Optional, only for 'upload' type
+// }
 
 export const Hero: HeroBlock = {
     slug: 'hero',

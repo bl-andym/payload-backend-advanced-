@@ -1,5 +1,3 @@
-import { CollectionConfig } from 'payload/types';
-
 interface TwoColumnBlock {
     slug: string;
     labels: {
