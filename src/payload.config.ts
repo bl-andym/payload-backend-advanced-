@@ -8,6 +8,7 @@ import Users from './collections/Users'
 import { Pages } from './collections/Pages'
 import { Media } from './collections/Media'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { BlogPosts } from './collections/BlogPosts'
 
 export default buildConfig({
   admin: {
@@ -19,6 +20,7 @@ export default buildConfig({
     Users,
     Pages,
     Media,
+    BlogPosts,// works in the browser!
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
