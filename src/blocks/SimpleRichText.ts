@@ -1,6 +1,6 @@
-import { CollectionConfig } from 'payload/types';
+import { Block } from 'payload/types';
 
-export const SimpleRichText: CollectionConfig = {
+export const SimpleRichText: Block = {
     slug: 'simpleRichText',
     labels: {
         singular: 'Simple Rich Text',
@@ -11,7 +11,6 @@ export const SimpleRichText: CollectionConfig = {
             name: 'body',
             label: 'Body',
             type: 'richText',
-
         }
     ]
-}
+};

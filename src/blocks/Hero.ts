@@ -1,50 +1,6 @@
-interface HeroBlock {
-    slug: string;
-    labels: {
-        singular: string;
-        plural: string;
-    };
-    fields: (TextualField | TextAreaField | UploadField)[];
-}
+import { Block } from 'payload/types';
 
-interface TextualField {
-    name: string;
-    label: string;
-    type: 'text';
-}
-
-interface TextAreaField {
-    name: string;
-    label: string;
-    type: 'textarea';
-}
-
-interface UploadField {
-    name: string;
-    label: string;
-    type: 'upload';
-    relationTo: string;
-}
-
-/* works in browser but Pages.ts not happy */
-
-// interface HeroBlock {
-//     slug: string;
-//     labels: {
-//         singular: string;
-//         plural: string;
-//     };
-//     fields: Field[];
-// }
-
-// interface Field {
-//     name: string;
-//     label: string;
-//     type: 'text' | 'textarea' | 'upload';
-//     relationTo?: string; // Optional, only for 'upload' type
-// }
-
-export const Hero: HeroBlock = {
+export const Hero: Block = {
     slug: 'hero',
     labels: {
         singular: 'Hero Block',

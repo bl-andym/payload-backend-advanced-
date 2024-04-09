@@ -1,61 +1,6 @@
-interface TwoColumnBlock {
-    slug: string;
-    labels: {
-        singular: string;
-        plural: string;
-    };
-    fields: (TextualField | TextAreaField | UploadField | SelectField)[];
-}
+import { Block } from 'payload/types';
 
-interface TextualField {
-    name: string;
-    label: string;
-    type: 'text';
-}
-
-interface TextAreaField {
-    name: string;
-    label: string;
-    type: 'textarea';
-}
-
-interface UploadField {
-    name: string;
-    label: string;
-    type: 'upload';
-    relationTo: string;
-}
-
-interface SelectField {
-    name: string;
-    label: string;
-    type: 'select';
-    options: {
-        label: string;
-        value: string;
-    }[];
-}
-
-/* works in browser but Pages.ts not happy */
-
-// interface TwoColumnBlock {
-//     slug: string;
-//     labels: {
-//         singular: string;
-//         plural: string;
-//     };
-//     fields: Field[];
-// }
-
-// interface Field {
-//     name: string;
-//     label: string;
-//     type: 'text' | 'textarea' | 'upload' | 'select';
-//     relationTo?: string; // Optional, for 'upload' type
-//     options?: { label: string; value: string }[]; // Optional, for 'select' type
-// }
-
-export const TwoColumn: TwoColumnBlock = {
+export const TwoColumn: Block = {
     slug: 'twoColumn',
     labels: {
         singular: 'Two Column Block',
