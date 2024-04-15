@@ -10,6 +10,8 @@ import { Media } from './collections/Media'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { BlogPosts } from './collections/BlogPosts'
 import { PageTemplates } from './collections/pageTemplates/PageTemplates'
+import { Header } from './globals/Header'
+import { Footer } from './globals/Footer'
 
 export default buildConfig({
   admin: {
@@ -29,8 +31,14 @@ export default buildConfig({
     Users,
     Pages,
     Media,
-    BlogPosts,// works in the browser!
+    // works in the browser!
+    BlogPosts,
     PageTemplates,
+  ],
+  globals: [
+    // works in the browser!
+    Header,
+    Footer,
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

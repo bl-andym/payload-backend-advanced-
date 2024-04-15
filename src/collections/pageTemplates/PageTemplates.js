@@ -1,4 +1,5 @@
 import { Hero } from "../../blocks/Hero";
+import { RecentBlogPosts } from "../../blocks/RecentBlogPosts";
 import { SimpleRichText } from "../../blocks/SimpleRichText";
 import { TwoColumn } from "../../blocks/TwoColumn";
 import getCollectionSchemaHandler from "./handlers/getCollectionSchemaHandler";
@@ -63,7 +64,8 @@ export const PageTemplates = {
             blocks: [
                 Hero,
                 TwoColumn,
-                SimpleRichText
+                SimpleRichText,
+                RecentBlogPosts,
             ]
         }
     ]
