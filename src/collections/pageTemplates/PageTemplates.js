@@ -1,5 +1,6 @@
+//import { Accordion } from "../../globals/Accordion";
 import { Hero } from "../../blocks/Hero";
-import { RecentBlogPosts } from "../../blocks/RecentBlogPosts";
+//import { RecentBlogPosts } from "../../blocks/RecentBlogPosts";
 import { SimpleRichText } from "../../blocks/SimpleRichText";
 import { TwoColumn } from "../../blocks/TwoColumn";
 import getCollectionSchemaHandler from "./handlers/getCollectionSchemaHandler";
@@ -65,7 +66,8 @@ export const PageTemplates = {
                 Hero,
                 TwoColumn,
                 SimpleRichText,
-                RecentBlogPosts,
+                //Accordion,
+                //RecentBlogPosts,
             ]
         }
     ]

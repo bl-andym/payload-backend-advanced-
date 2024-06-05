@@ -5,7 +5,7 @@ export const Header = {
         plural: 'Headers',
     },
     access: {
-        read: () => true,
+        read: () => true, // public access
     },
     fields: [
         {

@@ -4,9 +4,9 @@ export const RecentBlogPosts = {
         singular: 'Recent Blog Posts',
         plural: 'Recent Blog Posts',
     },
-    // access: {
-    //     read: () => true,
-    // },
+    access: {
+        read: () => true,
+    },
     fields: [
         {
             name: 'heading',

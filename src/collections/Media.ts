@@ -7,7 +7,7 @@ export const Media: CollectionConfig = {
         plural: 'Media',
     },
     access: {
-        read: () => true,
+        read: () => true, // public access
     },
     upload: true,
     fields: [

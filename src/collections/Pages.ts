@@ -2,7 +2,8 @@ import { CollectionConfig } from 'payload/types';
 import { Hero } from '../blocks/Hero';
 import { TwoColumn } from '../blocks/TwoColumn';
 import { SimpleRichText } from '../blocks/SimpleRichText';
-import { RecentBlogPosts } from '../blocks/RecentBlogPosts';
+//import { RecentBlogPosts } from '../blocks/RecentBlogPosts';
+//import { Accordion } from '../globals/Accordion';
 
 export const Pages: CollectionConfig = {
     slug: 'pages', // The slug of the collection (used in routes and queries)
@@ -37,7 +38,8 @@ export const Pages: CollectionConfig = {
                 Hero,
                 TwoColumn,
                 SimpleRichText,
-                RecentBlogPosts,
+                //Accordion,
+                //RecentBlogPosts,
             ]
         },
     ],
