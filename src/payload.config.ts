@@ -12,6 +12,7 @@ import { BlogPosts } from './collections/BlogPosts'
 import { PageTemplates } from './collections/pageTemplates/PageTemplates'
 import { Header } from './globals/Header'
 import { Footer } from './globals/Footer'
+//import { Accordion } from './globals/Accordion'
 
 export default buildConfig({
   admin: {
@@ -39,6 +40,7 @@ export default buildConfig({
     // works in the browser!
     Header,
     Footer,
+    //Accordion,
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

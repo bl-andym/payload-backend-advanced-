@@ -1,8 +1,8 @@
-//import { Accordion } from "../../globals/Accordion";
 import { Hero } from "../../blocks/Hero";
 //import { RecentBlogPosts } from "../../blocks/RecentBlogPosts";
 import { SimpleRichText } from "../../blocks/SimpleRichText";
 import { TwoColumn } from "../../blocks/TwoColumn";
+//import { Accordion } from "../../globals/Accordion";
 import getCollectionSchemaHandler from "./handlers/getCollectionSchemaHandler";
 import AttributesHelper from "./ui/AttributesHelper";
 
